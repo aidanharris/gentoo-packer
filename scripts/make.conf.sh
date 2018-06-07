@@ -23,3 +23,7 @@ USE="${USE:-minimal -doc ${SSL_LIB:-openssl}}"
 DATA
 EOF
 
+if chroot /mnt/gentoo /bin/bash -c 'command -v systemctl > /dev/null 2>&1'
+then
+  echo 'USE="$USE systemd -consolekit -elogind"' >> /mnt/gentoo/etc/portage/make.conf
+fi
