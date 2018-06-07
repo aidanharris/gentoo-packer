@@ -52,7 +52,7 @@
   "description": "Faithful Stage 3 Gentoo Installation (VirtualBox)",
   "post-processors": [
     {
-      "output": "gentoo-amd64-stage3-qemu.box",
+      "output": "gentoo-amd64-stage3-qemu{{user `box`}}.box",
       "type": "vagrant"
     }
   ],
@@ -81,7 +81,8 @@
     "stage3": "20180415T214502Z",
     "username": "root",
     "tarball": "",
-    "tarball_url": ""
+    "tarball_url": "",
+    "box": ""
   }
 }
 
