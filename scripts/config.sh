@@ -23,7 +23,7 @@
 
 #export SSL_LIB="${SSL_LIB:-openssl}"
 export SSL_LIB="${SSL_LIB:-libressl}"
-export kernel="${kernel:-=sys-kernel/gentoo-sources-4.14.47}"
+export kernel="${kernel:-=sys-kernel/gentoo-sources-4.14.48}"
 if grep -q -i systemd <<< "$tarball"
 then
   export enable_service_command="${enable_service_command:-systemctl enable {{service\}\}}"
