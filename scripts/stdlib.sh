@@ -8,6 +8,13 @@ errexit() {
   exit "$exitcode"
 }
 
+# Like errexit only just a warning
+errwarn() {
+  [[ -n "$1" ]] && printf "%s\\n" "$1" > /dev/stderr
+
+  return 0
+}
+
 # shellcheck disable=SC2154
 [[ -z "$enable_service_command" ]] && errexit "No enable_service_command is defined"
 
